@@ -1,0 +1,2 @@
+clone - creates/clones git folder on local machine, fills it with a .git file
+
