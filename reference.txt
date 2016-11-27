@@ -1,2 +1,5 @@
 clone - creates/clones git folder on local machine, fills it with a .git file
-
+add - adds file to list of things git tracks
+push 
+pull
+commit
