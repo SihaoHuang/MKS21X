@@ -12,9 +12,9 @@ public abstract Class LibraryBook extends Book implements Comparable<Book>{
   }
 
   public void LibraryBook()
-  abstract void checkOut();
-  abstract void returned();
-  abstract String circulationStatus();
+  public abstract void checkOut();
+  public abstract void returned();
+  public abstract String circulationStatus();
 
   public int compareTo(LibraryBook b){
     return this.title.compareTo(b.getTitle);
