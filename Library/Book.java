@@ -17,7 +17,7 @@ public class Book{
   }
 
   public String toString(){
-    return "The author is " + author + ", the title is " + title + "and the ISBN is " + ISBN + ".";
+    return "The author is " + author + ", the title is " + title + ", the ISBN is " + ISBN;
   }
 
   public void setAuthor(String newAuthor){

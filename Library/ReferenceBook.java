@@ -1,4 +1,4 @@
-public Class ReferenceBook extends LibraryBook{
+public class ReferenceBook extends LibraryBook{
 
   private String collection;
 
@@ -12,6 +12,10 @@ public Class ReferenceBook extends LibraryBook{
     collection = "";
   }
 
+  public String toString(){
+    return super.toString() + ", the collection is " + collection;
+  }
+
   public String getCollection(){
     return collection;
   }
@@ -20,7 +24,7 @@ public Class ReferenceBook extends LibraryBook{
     collection = newCollection;
   }
 
-  public void checkout(){
+  public void checkout(String patron, String due){
     System.out.println("cannot check out a reference book");
   }
 
@@ -28,7 +32,7 @@ public Class ReferenceBook extends LibraryBook{
     System.out.println("reference book could not have been checked out -- return impossible");
   }
 
-  public void circulationStatus(){
+  public String circulationStatus(){
     return "non-circulating reference book";
   }
 
