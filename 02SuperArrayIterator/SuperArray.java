@@ -1,7 +1,10 @@
-public class SuperArray{
+import java.util.Iterator;
+
+public class SuperArray implements Iterable<String>{
   private String[] data;
   private int size;
   private String[] intermediate;
+  private int at; //for iterations
 
   public SuperArray(){
     data = new String[10];
@@ -160,6 +163,41 @@ public class SuperArray{
     data = intermediate;
   }
   
+  public Iterator<String> iterator(){
+    return new SuperArrayIterator(this,at); //maybe change this later?
+  }
+}
+
+/*********************************************************************/
+
+public class SuperArrayIterator implements Iterator<String>{
+  
+  SuperArray arr = new SuperArray;
+  int at;
+
+  public SuperArrayIterator(SuperArray argArr,int argAt){
+    at = argAt;
+    arr = argArr;
+  }
+
+  public String next(){
+    if (hasNext()) {
+      at++;
+      return arr.get(end-1);
+    }
+    else {
+      throw new NoSuchElementException();
+    }
+  }
+
+  public boolean hasNext(){
+    return at < arr.capacity();
+  }
+
+  public void remove(){
+    throw new UnsupportedOperationException();
+  }
+
 }
 
 //Sihao Huang, Mr Konstantinovich APCS Pd 10, 2016
