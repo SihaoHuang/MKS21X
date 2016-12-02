@@ -47,15 +47,3 @@ public class OrderedSuperArray extends SuperArray{
 }
 
 //Sihao Huang, Mr Konstantinovich APCS Pd 10, 2016
-
-/*
-Better to do add, with locate integrated
-public boolean add(String element){
-  int index = size();
-  while(index>0 && get(index-1).compareTo(element)>0){
-    index --;
-  }
-  super.add(index,element);
-  return true;
-}
-*/
