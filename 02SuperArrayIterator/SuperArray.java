@@ -1,4 +1,4 @@
-import java.util.Iterator;
+import java.util.*;
 
 public class SuperArray implements Iterable<String>{
   private String[] data;
@@ -170,9 +170,9 @@ public class SuperArray implements Iterable<String>{
 
 /*********************************************************************/
 
-public class SuperArrayIterator implements Iterator<String>{
+class SuperArrayIterator implements Iterator<String>{
   
-  SuperArray arr = new SuperArray;
+  SuperArray arr = new SuperArray();
   int at;
 
   public SuperArrayIterator(SuperArray argArr,int argAt){
@@ -183,10 +183,10 @@ public class SuperArrayIterator implements Iterator<String>{
   public String next(){
     if (hasNext()) {
       at++;
-      return arr.get(end-1);
+      return arr.get(at-1);
     }
     else {
-      throw new NoSuchElementException();
+      throw new NoSuchElementException(); //import util later!!!
     }
   }
 
