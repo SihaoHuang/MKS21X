@@ -164,8 +164,14 @@ public class SuperArray implements Iterable<String>{
   }
   
   public Iterator<String> iterator(){
-    return new SuperArrayIterator(this,at); //maybe change this later?
+    return new SuperArrayIterator(this.at); //maybe change this later?
   }
+
+  public static void main(String[] args){
+    SuperArray a = new SuperArray(10);
+    System.out.println(a.toString());
+  }
+
 }
 
 /*********************************************************************/
